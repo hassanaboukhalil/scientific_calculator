@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Calculater</title>
+</head>
+<body>
+    <div class="calculater">
+        <div class="glass">
+            <span class="radORdeg" id="radORdeg"></span>
+            <p class="equation" id="equation_html"></p>
+            <p class="result" id="result"></p>
+        </div>
+        <div class="file1" id="file1" onclick="changeFile(this)">1</div>
+        <div class="file2" id="file2" onclick="changeFile(this)">2</div>
+        <div class="grid-of-all-btns">
+            <div class="item-ac" onclick="ac_btn(this)"><p id="ac">AC</p></div>
+            <div class="item" id="rc-01" onclick="write_on_screen(this)"><p class="row1">+</p></div>
+            <div class="item" id="rc-02" onclick="write_on_screen(this)"><p class="row1">-</p></div>
+
+            <div class="item" id="rc-10" onclick="write_on_screen(this)"><p class="row2">1</p></div>
+            <div class="item" id="rc-11" onclick="write_on_screen(this)"><p class="row2">2</p></div>
+            <div class="item" id="rc-12" onclick="write_on_screen(this)"><p class="row2">3</p></div>
+            <div class="item" id="rc-13" onclick="write_on_screen(this)"><p class="row2">x</p></div>
+
+            <div class="item" id="rc-20" onclick="write_on_screen(this)"><p class="row3">4</p></div>
+            <div class="item" id="rc-21" onclick="write_on_screen(this)"><p class="row3">5</p></div>
+            <div class="item" id="rc-22" onclick="write_on_screen(this)"><p class="row3">6</p></div>
+            <div class="item" id="rc-23" onclick="write_on_screen(this)"><p class="row3">/</p></div>
+
+            <div class="item" id="rc-30" onclick="write_on_screen(this)"><p class="row4">7</p></div>
+            <div class="item" id="rc-31" onclick="write_on_screen(this)"><p class="row4">8</p></div>
+            <div class="item" id="rc-32" onclick="write_on_screen(this)"><p class="row4">9</p></div>
+
+            <div class="item-equal" id="equal" onclick="equal_btn(this)"><p>=</p></div>
+
+            <div class="item" id="rc-40" onclick="write_on_screen(this)"><p class="row5">0</p></div>
+            <div class="item" id="rc-41"><p class="row5">.</p></div>
+            <div class="item" id="rc-42"><p class="row5">DEL</p></div>
+        </div>
+    </div>
+    <script src="./code.js"></script>
+</body>
+</html>
