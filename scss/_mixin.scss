@@ -1,0 +1,57 @@
+@mixin MediaQueries_deviceSize($deviceSize) {
+  @if $deviceSize == "verylarge" {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $deviceSize == "large" {
+    @media (max-width: 991px) {
+      @content;
+    }
+  } @else if $deviceSize == "medium" {
+    @media (max-width: 600px) {
+      @content;
+    }
+  } @else if $deviceSize == "small" {
+    @media (max-width: 420px) {
+      @content;
+    }
+  } @else if $deviceSize == "verysmall" {
+    @media (max-width: 360px) {
+      @content;
+    }
+  } @else {
+    @error "error media queries";
+  }
+}
+
+@mixin btn($btn_width, $btn_height, $background, $txt_color) {
+  width: $btn_width;
+  height: $btn_height;
+  background-color: $background;
+  color: $txt_color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.33),
+    inset -5px -6px 4px rgba(0, 0, 0, 0.5);
+}
+
+/////grid container
+@mixin grid_container($column_nb, $gap) {
+  display: grid;
+  $c: auto;
+  @for $i from 1 to $column_nb {
+    $c: $c + " " + auto;
+
+    // @if $i == $column_nb - 1{
+    //     $c : $c + ' ' + auto;
+    // }
+    // @else{
+    //     //$c : $c + auto + ' ';
+    // }
+  }
+  // grid-template-columns: auto auto auto auto;
+  grid-template-columns: $c;
+  gap: $gap;
+}

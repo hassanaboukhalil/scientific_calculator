@@ -1,0 +1,91 @@
+@use './scss/colors' as *;
+@use './scss/mixin' as *;
+
+body{
+    background-color: $body_color;
+    margin: 0px;
+    justify-content: center;
+    display: flex;
+    font-family: monospace;
+    user-select: none;
+}
+.calculater{
+    background-color: $calculater_color;
+    width: 302px;
+    height: 468px;
+    margin: auto;
+    border: solid;
+    border-radius: 3%;
+    position: relative;
+
+    .glass{
+        background-color: #D9D9D9;
+        width: 254px;
+        height: 69px;
+        margin: auto;
+        margin-top: 25px;
+        position: relative;
+
+        
+        .radORdeg{
+            font-size: 9px;
+            top: 0px;
+            right: 0px;
+            position: absolute;
+        }
+        .equation{
+            top: 5px;
+            font-size: 27px;
+            position: absolute;
+            margin: 0px;
+        }
+        .result{
+            font-size: 20px;
+            position: absolute;
+            margin: 0px;
+            bottom: 0px;
+            right: 0px;
+        }
+    }
+    .file1, .file2{
+        @include btn(15px,15px,$btn_file1,black);
+        box-shadow: none;
+        font-size: small;
+        position: absolute;
+        margin-top: 5px;
+    }
+    .file1{
+        background-color: $btn_file1;
+    }
+    .file2{
+        background-color: $btn_file2;
+    }
+
+    .grid-of-all-btns{
+        width: 254px;
+        margin: auto;
+        @include grid_container(4,19px);
+        margin-top: 30px;
+
+        .item-ac{
+            @include btn(117px,48px,#FF1B1B,white);
+            grid-column: 1 / span 2;
+        }
+        .item-equal{
+            @include btn(49px,116px,#26FFE5,black);
+            grid-area: 4 / 4 / 6 / 5;
+        }
+        .item{
+            @include btn(49px,48px,white,black);
+            font-weight: bold;
+        }
+        .item-ac, .item-equal, .item{
+            p{
+                padding-right: 2px;
+                font-size: large;
+            }
+        }
+    }
+}
+
+
